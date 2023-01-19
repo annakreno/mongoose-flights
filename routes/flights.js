@@ -8,7 +8,10 @@ router.get('/', flightsCtrl.index);
 /* show new flight form page */
 router.get('/new', flightsCtrl.new);
 
-/* CREATE new flight */
+/* create new flight */
 router.post('/', flightsCtrl.create);
+
+/* show flight details */
+router.get('/:id', flightsCtrl.show);
 
 module.exports = router;
