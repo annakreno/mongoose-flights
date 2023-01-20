@@ -36,6 +36,35 @@
   </table>
 
 </section>
+
+<br><h2>Tickets:</h2>
+
+<table id="show-ticket-details">
+
+  <thead>
+    <tr>
+      <th>Seat:</th>
+      <th>Price:</th>
+      <th>Flight<br>No.:</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% tickets.forEach(function(t) { %>
+    <tr>
+      <td><div><%= t.seat %></div></td>
+      <td><div><%= t.price %></div></td>
+      <td><div><%= t.flight %></div></td>
+    </tr>
+    <% }); %>
+
+  </tbody>
+
+</table>
+
+<a href="/flights/<%= flight._id %>/tickets" id="newTicketButton">New Ticket</a>
+
   
 <br><br><h2>Add Destination:</h2>
 
